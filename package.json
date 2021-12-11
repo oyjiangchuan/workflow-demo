@@ -1,12 +1,13 @@
 {
   "name": "workflow-demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "代码规范",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
     "commit": "git-cz",
-    "prepare": "husky install"
+    "release": "standard-version"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +23,8 @@
     "eslint-plugin-vue": "^8.2.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "standard-version": "^9.3.2"
   },
   "config": {
     "commitizen": {
