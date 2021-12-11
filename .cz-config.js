@@ -1,35 +1,29 @@
 'use strict'
 module.exports = {
   types: [
-    { value: 'feat', name: '特性:    一个新的特性' },
-    { value: '🐛修复', name: '修复:    修复一个Bug' },
-    { value: '📝文档', name: '文档:    变更的只有文档' },
-    { value: '💄格式', name: '格式:    空格, 分号等格式修复' },
-    { value: '♻️重构', name: '重构:    代码重构，注意和特性、修复区分开' },
-    { value: '⚡️性能', name: '性能:    提升性能' },
-    { value: '✅测试', name: '测试:    添加一个测试' },
-    { value: '🔧工具', name: '工具:    开发工具变动(构建、脚手架工具等)' },
-    { value: '⏪回滚', name: '回滚:    代码回退' }
+    { value: ':sparkles:feat', name: '✨ 特性 | 一个新的特性' },
+    { value: ':bug:fix', name: '🐛 修复 | 修复一个Bug' },
+    { value: ':tada:init', name: '🎉 Init | 初始化' },
+    { value: ':memo:docs', name: '📝 文档 | 文档' },
+    { value: ':lipstick:style', name: '💄 样式 | 样式' },
+    { value: ':recycle:refactor', name: '♻️  重构 | 代码重构' },
+    { value: ':zap:perf', name: '⚡️ 性能 | 性能优化' },
+    { value: ':white_check_mark:test', name: '✅ 测试 | 添加测试' },
+    { value: ':rocket:chore', name: '🚀 工具 | 构建/工程依赖/工具' },
+    { value: ':rewind:revert', name: '⏪ 回滚 | 代码回退' },
+    { value: ':package:build', name: '📦‍ 打包 | 打包构建' },
+    { value: ':construction_worker:ci', name: '👷 CI | CI 配置' }
   ],
-  scopes: [
-    { name: '模块1' },
-    { name: '模块2' },
-    { name: '模块3' },
-    { name: '模块4' }
-  ],
-  // override the messages, defaults are as follows
   messages: {
-    type: '选择一种你的提交类型:',
-    scope: '选择一个scope (可选):',
-    customScope: 'Denote the SCOPE of this change:',
-    subject: '短说明:\n',
-    body: '长说明，使用"|"换行(可选)：\n',
-    breaking: '非兼容性说明 (可选):\n',
-    footer: '关联关闭的issue，例如：#31, #34(可选):\n',
-    confirmCommit: '确定提交说明?(yes/no)'
+    type: '请选择提交类型(必填)',
+    customScope: '请输入文件修改范围(可选)',
+    subject: '请简要描述提交(必填)',
+    body: '请输入详细描述(可选)',
+    breaking: '列出任何BREAKING CHANGES(可选)',
+    footer: '请输入要关闭的issue 例如：#31, #34(可选)',
+    confirmCommit: '确定提交此说明吗？'
   },
   allowCustomScopes: true,
-  allowBreakingChanges: ['特性', '修复'],
-  // limit subject length
+  allowBreakingChanges: ['feat', 'fix'], // 当提交类型为feat、fix时才有破坏性修改选项
   subjectLimit: 100
 }
